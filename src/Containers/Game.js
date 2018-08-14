@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Player from '../Assets/Player';
 
-class CanvasComponent extends Component {
+class Game extends Component {
   constructor(props) {
     super(props);
     this.player = new Player();
@@ -24,4 +24,4 @@ class CanvasComponent extends Component {
   }
 }
 
-export default CanvasComponent;
+export default Game;

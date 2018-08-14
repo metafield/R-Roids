@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Canvas from './Containers/CanvasComponent'
+import Canvas from './Containers/Game'
 import './App.css';
 
 class App extends Component {
