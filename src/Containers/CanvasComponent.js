@@ -1,13 +1,20 @@
 import React, { Component } from "react";
+import Player from '../Assets/Player';
 
 class CanvasComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.player = new Player();
+  }
+
   componentDidMount() {
     this.update();
   }
 
   update() {
     const ctx = this.refs.canvas.getContext("2d");
-    context.fillRect(0, 0, 100, 100);
+    // ctx.fillRect(0, 0, 100, 100);
+    this.player.draw(ctx)
   }
 
   render() {
