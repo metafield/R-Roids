@@ -5,6 +5,7 @@ export default class Player {
     this.x = 50; // players x Position
     this.y = 50; // players y Position
     this.angle = Rotate.deg2rad(180); // plays angle in degrees
+    this.rotationalVelocity = 0;
     this.drawPath = [
       { x: 24, y: 0 },
       { x: -24, y: -18 },
