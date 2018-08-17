@@ -63,6 +63,12 @@ class Game extends Component {
     });
   }
 
+  drawBackground(ctx, colour) {
+    const {canvas} = this.refs;
+    ctx.fillStyle = colour;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
+
   // our main update function. This is ran every game tick and will render the results of our
   // inputs by applying physics to the graphics.
   update() {
@@ -71,6 +77,8 @@ class Game extends Component {
       const { player } = this.state;
       // clear the canvas TODO: make canvas size a constant global somewhere.
       ctx.clearRect(0, 0, 700, 700);
+      // draw the background
+      this.drawBackground(ctx, "#eeeeee");
       // add velocities
       player.angle += player.rotationalVelocity;
       player.x += player.velocity.x;
@@ -91,7 +99,7 @@ class Game extends Component {
           {this.state.player.velocity.x},{this.state.player.velocity.y}
         </p>
         <p> {`Accelerating: ${this.state.player.accelerating} `} </p>
-        <canvas ref="canvas" width={700} height={700} />
+        <canvas ref="canvas" width={900} height={700} />
       </React.Fragment>
     );
   }
